@@ -4,6 +4,11 @@ import java.time.LocalDateTime;
 
 public class TaskTest {
 
+  @After
+  public void tearDown() {
+    Task.clear();
+  }
+
   @Test
   public void Task_instantiatesCorrectly_true() {
     Task myTask = new Task("Mow the lawn");
