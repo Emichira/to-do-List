@@ -6,9 +6,9 @@ import java.util.Arrays;
 public class CategoryTest {
 
   @Before
-public void setUp() {
-  DB.sql2o = new Sql2o("jdbc:postgresql://localhost:5432/to_do_test", "gnjoroge", "1234");
-}
+  public void setUp() {
+    DB.sql2o = new Sql2o("jdbc:postgresql://localhost:5432/to_do_test", "michira", "1234");
+  }
 
 @After
 public void tearDown() {
