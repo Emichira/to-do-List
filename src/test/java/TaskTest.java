@@ -100,6 +100,13 @@ public void save_savesCategoryIdIntoDB_true() {
   assertEquals(savedTask.getCategoryId(), myCategory.getId());
 }
 
+public void update_updatesTaskDescription_true() {
+  Task myTask = new Task("Mow the lawn", 1);
+  myTask.save();
+  myTask.update("Take a nap");
+  assertEquals("Take a nap", Task.find(myTask.getId()).getDescription());
+}
+
 
 //clearing database i.e the tasks and categories created
   @After
